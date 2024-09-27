@@ -57,7 +57,7 @@ class Main {
         System.out.println(m1.toString());
         System.out.println(m2.toString());
 
-
+        System.out.println("Nombre de produits max: " + m1.afficherNbProduitsMax());
 
 
 

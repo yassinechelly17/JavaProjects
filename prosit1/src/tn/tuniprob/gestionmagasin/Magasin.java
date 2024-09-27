@@ -6,12 +6,14 @@ public class Magasin {
     final int CAPACITE = 50;
     Produit[] produits = new Produit[CAPACITE];
     int nbProduits = 0;
+    static int nbProduitsMax = 0;
 
     public void ajouterProduit(Produit p) {
         for (int i = 0; i < CAPACITE; i++) {
             if (produits[i] == null) {
                 produits[i] = p;
                 this.nbProduits++;
+                nbProduitsMax++;
                 return;
             }
         }
@@ -25,6 +27,10 @@ public class Magasin {
             }
         }
         return s.toString();
+    }
+
+    public int afficherNbProduitsMax(){
+        return nbProduitsMax;
     }
 }
 
