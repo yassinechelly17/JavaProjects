@@ -81,5 +81,19 @@ public class Produit {
         this.date_expiration = date_expiration;
     }
 
+    public static boolean comparer(Produit p1, Produit p2) {
+        if (p1.id == p2.id && p1.libelle == p2.libelle && p1.prix == p2.prix) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean comparer(Produit p) {
+        if (this.id == p.id && this.libelle == p.libelle && this.prix == p.prix) {
+            return true;
+        }
+        return false;
+    }
+
 }
 
