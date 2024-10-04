@@ -58,6 +58,13 @@ class Main {
         System.out.println(m2.toString());
 
         System.out.println("Nombre de produits max: " + m1.afficherNbProduitsMax());
+        System.out.println("Nombre de produits max: " + Magasin.nbProduitsMax);
+        Produit p1_identique = new Produit(1021, "Lait", "Delice", 0.800);
+        System.out.println("Produit p1 et p1_identique sont identiques? (fonction statique): " + Produit.comparer(p1, p1_identique));
+        System.out.println("Produit p1 et p1_identique sont identiques? : " + p1.comparer(p1_identique));
+        System.out.println("Est-ce que magasin m1 a le produit p1? " + m1.chercherProduit(p1));
+        System.out.println("Est-ce que magasin m1 a le produit p3? " + m1.chercherProduit(p3));
+        System.out.println("Le magasin avec le plus de produits est le magasin avec id " + Magasin.retourneMagAvecPlusProds(m1, m2).id + " et comme addresse: " + Magasin.retourneMagAvecPlusProds(m1, m2).adresse);
 
 
 
