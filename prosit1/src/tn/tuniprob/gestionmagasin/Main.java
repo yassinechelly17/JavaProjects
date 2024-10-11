@@ -67,7 +67,54 @@ class Main {
         System.out.println("Le magasin avec le plus de produits est le magasin avec id " + Magasin.retourneMagAvecPlusProds(m1, m2).id + " et comme addresse: " + Magasin.retourneMagAvecPlusProds(m1, m2).adresse);
 
 
+        // ---------------- PROSIT 4 -----------------------
+        Magasin carrefour = new Magasin();
+        Magasin monoprix = new Magasin();
+        carrefour.id = 3;
+        carrefour.adresse = "Centre-Ville";
+        monoprix.id = 4;
+        monoprix.adresse = "Menzeh 6";
 
+        Caissier c1 = new Caissier(1, "Ali", "Tunis", 40, 1);
+        Caissier c2 = new Caissier(2, "Ahmed", "Ariana", 35, 2);
+        Vendeur v1 = new Vendeur(3, "Sami", "Marsa", 45, 0.10);
+        Responsable r1 = new Responsable(4, "Mohamed", "Lac 2", 50, 1000);
+
+        c1.ajouterEmploye(carrefour);
+        c2.ajouterEmploye(carrefour);
+        v1.ajouterEmploye(carrefour);
+        r1.ajouterEmploye(carrefour);
+
+        Caissier c3 = new Caissier(5, "Houssem", "Tunis", 40, 1);
+        Vendeur v2 = new Vendeur(6, "Sarra", "Marsa", 45, 0.10);
+        Vendeur v3 = new Vendeur(7, "Sami", "Marsa", 45, 0.10);
+        Vendeur v4 = new Vendeur(8, "Sami", "Marsa", 45, 0.10);
+        Responsable r2 = new Responsable(9, "Mohamed", "Lac 2", 50, 1000);
+
+        c3.ajouterEmploye(monoprix);
+        v2.ajouterEmploye(monoprix);
+        v3.ajouterEmploye(monoprix);
+        v4.ajouterEmploye(monoprix);
+        r2.ajouterEmploye(monoprix);
+
+        System.out.println(c1.toString());
+        System.out.println(c2.toString());
+        System.out.println(v1.toString());
+        System.out.println(r1.toString());
+
+        Produit p4 = new Produit(1021, "Lait", "Delice", 0.800);
+        Produit p5 = new Produit(2510, "Yaourt", "Vitalait", 0.500);
+
+        System.out.println(carrefour.toString());
+        System.out.println(monoprix.toString());
+
+        System.out.println(carrefour.afficherPrime());
+        System.out.println(monoprix.afficherPrime());
+
+        System.out.println(carrefour.afficherSalaire());
+        System.out.println(monoprix.afficherSalaire());
+
+        System.out.println(v1.comparerEmploye(v2));
 
         return;
     }
