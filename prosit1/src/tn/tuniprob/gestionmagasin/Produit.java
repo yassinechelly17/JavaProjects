@@ -95,5 +95,8 @@ public class Produit {
         return false;
     }
 
+    // P1.comparer(p2);
+    // Produit.comparer(p1, p2);
+
 }
 
