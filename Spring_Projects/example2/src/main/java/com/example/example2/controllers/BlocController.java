@@ -9,7 +9,6 @@ import com.example.example2.repositories.ChambreRepository;
 import com.example.example2.repositories.FoyerRepository;
 import com.example.example2.services.IBlocService;
 import lombok.AllArgsConstructor;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
